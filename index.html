@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-    <!-- Facebook Pixel -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -18,8 +17,6 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1213905960435896&ev=PageView&noscript=1" /></noscript>
-    <!-- End Facebook Pixel -->
-
     <script
         src="https://cdn.utmify.com.br/scripts/utms/latest.js"
         data-utmify-prevent-xcod-sck
@@ -121,13 +118,6 @@
             line-height: 1.4;
         }
 
-        .product-row .prod-price {
-            font-size: 15px;
-            font-weight: 800;
-            color: #0b6ecb;
-            margin-top: 4px;
-        }
-
         /* COUNTDOWN */
         .countdown-section {
             text-align: center;
@@ -221,10 +211,6 @@
             margin-bottom: 24px;
         }
 
-        .step:last-child {
-            margin-bottom: 0;
-        }
-
         .step-dot {
             position: absolute;
             left: -32px;
@@ -242,10 +228,7 @@
             z-index: 1;
         }
 
-        .step.done .step-dot {
-            background: #178a3b;
-        }
-
+        .step.done .step-dot { background: #178a3b; }
         .step.active .step-dot {
             background: #0b6ecb;
             box-shadow: 0 0 0 4px rgba(11, 110, 203, 0.15);
@@ -253,42 +236,17 @@
         }
 
         @keyframes pulse-dot {
-            0% {
-                box-shadow: 0 0 0 0 rgba(11, 110, 203, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 8px rgba(11, 110, 203, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(11, 110, 203, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(11, 110, 203, 0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(11, 110, 203, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(11, 110, 203, 0); }
         }
 
-        .step-name {
-            font-size: 14px;
-            font-weight: 700;
-            color: #111;
-        }
+        .step-name { font-size: 14px; font-weight: 700; color: #111; }
+        .step.pending .step-name { color: #aaa; }
+        .step-desc { font-size: 12px; color: #888; margin-top: 2px; line-height: 1.5; }
+        .step.active .step-desc { color: #0b6ecb; font-weight: 500; }
 
-        .step.pending .step-name {
-            color: #aaa;
-        }
-
-        .step-desc {
-            font-size: 12px;
-            color: #888;
-            margin-top: 2px;
-            line-height: 1.5;
-        }
-
-        .step.active .step-desc {
-            color: #0b6ecb;
-            font-weight: 500;
-        }
-
-        /* COMPLAINT SECTION */
+        /* FORM */
         .complaint-card {
             background: #fff;
             border-radius: 16px;
@@ -296,135 +254,35 @@
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
         }
 
-        .complaint-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .complaint-card .sub {
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: #444;
-            margin-bottom: 6px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            border: 1.5px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 12px 14px;
-            font-size: 14px;
-            font-family: 'Inter', sans-serif;
-            color: #111;
-            background: #fafafa;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: #0b6ecb;
-            background: #fff;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 6px; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; border: 1.5px solid #e0e0e0; border-radius: 10px; padding: 12px 14px;
+            font-size: 14px; background: #fafafa; outline: none;
         }
 
         .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #0b6ecb, #0a5db0);
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            padding: 16px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            transition: opacity 0.2s, transform 0.1s;
+            width: 100%; background: linear-gradient(135deg, #0b6ecb, #0a5db0); color: #fff;
+            border: none; border-radius: 12px; padding: 16px; font-size: 15px; font-weight: 700; cursor: pointer;
         }
 
-        .submit-btn:hover {
-            opacity: 0.9;
-        }
-
-        .submit-btn:active {
-            transform: scale(0.98);
-        }
-
-        /* SUCCESS MESSAGE */
-        .success-msg {
-            display: none;
-            background: linear-gradient(135deg, #178a3b, #136b2e);
-            color: #fff;
-            border-radius: 14px;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .success-msg.show {
-            display: block;
-        }
-
-        .success-msg .check {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        .success-msg h4 {
-            font-size: 17px;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .success-msg p {
-            font-size: 13px;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #aaa;
-        }
+        .success-msg { display: none; background: linear-gradient(135deg, #178a3b, #136b2e); color: #fff; border-radius: 14px; padding: 24px; text-align: center; }
+        .success-msg.show { display: block; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
     </style>
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
     <header class="topbar">
         <img src="logo-mercadolibre.png" alt="mercadolibre.com" class="logo-img" />
     </header>
 
     <div class="wrap">
-
-        <!-- ORDER CARD -->
         <div class="order-card">
             <h2>📦 ¡Su pedido está en camino!</h2>
             <div class="order-num" id="orderNum">Número de pedido #MLMX-<span></span></div>
 
-            <!-- PRODUCT -->
             <div class="product-row">
                 <img src="p1.png" alt="Producto">
                 <div>
@@ -432,223 +290,127 @@
                 </div>
             </div>
 
-            <!-- COUNTDOWN -->
             <div class="countdown-section">
                 <div class="countdown-label" id="countdownLabel">Entrega estimada en:</div>
                 <div class="countdown-boxes">
-                    <div class="countdown-box" id="boxDays">
-                        <div class="num" id="cdDays">6</div>
-                        <div class="unit">Días</div>
-                    </div>
-                    <div class="countdown-box" id="boxHours">
-                        <div class="num" id="cdHours">00</div>
-                        <div class="unit">Horas</div>
-                    </div>
-                    <div class="countdown-box" id="boxMins">
-                        <div class="num" id="cdMins">00</div>
-                        <div class="unit">Min</div>
-                    </div>
-                    <div class="countdown-box" id="boxSecs">
-                        <div class="num" id="cdSecs">00</div>
-                        <div class="unit">Seg</div>
-                    </div>
+                    <div class="countdown-box"><div class="num" id="cdDays">00</div><div class="unit">Días</div></div>
+                    <div class="countdown-box"><div class="num" id="cdHours">00</div><div class="unit">Horas</div></div>
+                    <div class="countdown-box"><div class="num" id="cdMins">00</div><div class="unit">Min</div></div>
+                    <div class="countdown-box"><div class="num" id="cdSecs">00</div><div class="unit">Seg</div></div>
                 </div>
             </div>
 
-            <!-- ETA BAR -->
-            <div class="eta-bar" id="etaBar">
-                Llegada estimada: <span id="etaDate">—</span>
-            </div>
+            <div class="eta-bar">Llegada estimada: <span id="etaDate">—</span></div>
 
-            <!-- STATUS STEPS -->
             <div class="steps-title">Estado de la entrega</div>
             <div class="steps" id="stepsContainer">
-                <div class="step" id="step1">
-                    <div class="step-dot">✓</div>
-                    <div class="step-name">Pedido confirmado</div>
-                    <div class="step-desc" id="step1Desc">Su pedido ha sido realizado y confirmado correctamente.</div>
-                </div>
-                <div class="step" id="step2">
-                    <div class="step-dot">✓</div>
-                    <div class="step-name">En preparación</div>
-                    <div class="step-desc" id="step2Desc">Su pedido está siendo preparado en nuestro almacén.</div>
-                </div>
-                <div class="step" id="step3">
-                    <div class="step-dot">→</div>
-                    <div class="step-name">Despachado</div>
-                    <div class="step-desc" id="step3Desc">Su pedido ha sido entregado al transportista.</div>
-                </div>
-                <div class="step" id="step4">
-                    <div class="step-dot">🚚</div>
-                    <div class="step-name">En tránsito</div>
-                    <div class="step-desc" id="step4Desc">Su paquete está en camino hacia usted.</div>
-                </div>
-                <div class="step" id="step5">
-                    <div class="step-dot">🏠</div>
-                    <div class="step-name">En reparto</div>
-                    <div class="step-desc" id="step5Desc">¡Ya falta poco! La entrega se realizará hoy.</div>
-                </div>
-                <div class="step" id="step6">
-                    <div class="step-dot">🎉</div>
-                    <div class="step-name">Entregado</div>
-                    <div class="step-desc" id="step6Desc">Su pedido ha sido entregado. ¡Que lo disfrute!</div>
-                </div>
+                <div class="step" id="step1"><div class="step-dot">✓</div><div class="step-name">Pedido confirmado</div><div class="step-desc">Su pedido ha sido realizado y confirmado correctamente.</div></div>
+                <div class="step" id="step2"><div class="step-dot">✓</div><div class="step-name">En preparación</div><div class="step-desc">Su pedido está siendo preparado en nuestro almacén.</div></div>
+                <div class="step" id="step3"><div class="step-dot">→</div><div class="step-name">Despachado</div><div class="step-desc">Su pedido ha sido entregado al transportista.</div></div>
+                <div class="step" id="step4"><div class="step-dot">🚚</div><div class="step-name">En tránsito</div><div class="step-desc">Su paquete está en camino hacia usted.</div></div>
+                <div class="step" id="step5"><div class="step-dot">🏠</div><div class="step-name">En reparto</div><div class="step-desc">¡Ya falta poco! La entrega se realizará hoy.</div></div>
+                <div class="step" id="step6"><div class="step-dot">🎉</div><div class="step-name">Entregado</div><div class="step-desc">Su pedido ha sido entregado. ¡Que lo disfrute!</div></div>
             </div>
         </div>
 
-        <!-- COMPLAINT FORM -->
         <div class="complaint-card">
             <h3>🔔 ¿Tiene algún inconveniente?</h3>
-            <div class="sub">Complete el siguiente formulario y nos pondremos en contacto con usted en un plazo máximo de 72 horas.</div>
-
             <form id="complaintForm">
-                <div class="form-group">
-                    <label for="fullName">Nombre completo</label>
-                    <input type="text" id="fullName" placeholder="Ej.: Juan Pérez" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" placeholder="Ej.: juan@correo.com" required />
-                </div>
-                <div class="form-group">
-                    <label for="phone">Número de teléfono</label>
-                    <input type="tel" id="phone" placeholder="Ej.: 071 234 5678" />
-                </div>
-                <div class="form-group">
-                    <label for="issueType">Tipo de inconveniente</label>
-                    <select id="issueType" required>
-                        <option value="">Seleccione una opción...</option>
-                        <option value="late">El pedido está retrasado</option>
-                        <option value="damaged">El artículo llegó dañado</option>
-                        <option value="wrong">Se recibió un artículo incorrecto</option>
-                        <option value="missing">Falta un artículo en el pedido</option>
-                        <option value="other">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Describa su inconveniente</label>
-                    <textarea id="message" placeholder="Por favor, describa su inconveniente con el mayor detalle posible..." required></textarea>
-                </div>
+                <div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Ej.: Juan Pérez" required /></div>
+                <div class="form-group"><label>Correo electrónico</label><input type="email" placeholder="Ej.: juan@correo.com" required /></div>
+                <div class="form-group"><label>Tipo de inconveniente</label><select required><option value="">Seleccione...</option><option value="late">Retrasado</option><option value="damaged">Dañado</option></select></div>
+                <div class="form-group"><label>Mensaje</label><textarea required></textarea></div>
                 <button type="submit" class="submit-btn">Enviar reclamación</button>
             </form>
-
-            <!-- SUCCESS MESSAGE -->
-            <div class="success-msg" id="successMsg">
-                <div class="check">✅</div>
-                <h4>¡Reclamación recibida!</h4>
-                <p>Gracias por ponerse en contacto con nosotros. Nuestro equipo revisará su reclamación y le responderá por correo electrónico en un plazo de <strong>72 horas</strong>.</p>
-            </div>
+            <div class="success-msg" id="successMsg"><h4>¡Reclamación recibida!</h4><p>Le responderemos en un prazo de 72 horas.</p></div>
         </div>
 
         <div class="footer">© 2026 mercadolibre.com · Todos los derechos reservados</div>
     </div>
 
     <script>
-        // ─── ORDER NUMBER ───────────────────────────────────────────────────────────
-        const orderNum = Math.floor(100000 + Math.random() * 900000);
-        document.querySelector('#orderNum span').textContent = orderNum;
+        // --- CONFIGURAÇÃO DINÂMICA ---
+        const AGORA = new Date();
+        const DIAS_PRAZO = 3; // Prazo alterado para 3 dias
+        
+        // Data de Entrega (3 dias a partir de agora)
+        const DELIVERY_DATE = new Date();
+        DELIVERY_DATE.setDate(AGORA.getDate() + DIAS_PRAZO);
+        DELIVERY_DATE.setHours(23, 59, 59);
 
-        // ─── REAL COUNTDOWN ─────────────────────────────────────────────────────────
-        // Fixed delivery date: 25 February 2026
-        const DELIVERY_DATE = new Date('2026-02-25T23:59:59');
-        const ORDER_DATE = new Date('2026-02-18T00:00:00'); // order placed date
-        const DELIVERY_MS = DELIVERY_DATE - ORDER_DATE;    // total delivery window
+        // Data do Pedido (Simulada como 6 horas atrás para parecer que o processo já começou hoje)
+        const ORDER_DATE = new Date();
+        ORDER_DATE.setHours(AGORA.getHours() - 6);
+        
+        const DELIVERY_MS = DELIVERY_DATE - ORDER_DATE;
 
-        // Show ETA date
+        // Mostrar data de chegada formatada
         const etaOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         document.getElementById('etaDate').textContent = DELIVERY_DATE.toLocaleDateString('es-ES', etaOptions);
 
-        function pad(n) { return String(n).padStart(2, '0'); }
+        // Número do pedido aleatório
+        document.querySelector('#orderNum span').textContent = Math.floor(100000 + Math.random() * 900000);
 
         function updateCountdown() {
             const now = new Date();
             const diff = DELIVERY_DATE - now;
+            if (diff <= 0) return;
 
-            if (diff <= 0) {
-                // Delivered!
-                document.getElementById('cdDays').textContent = '00';
-                document.getElementById('cdHours').textContent = '00';
-                document.getElementById('cdMins').textContent = '00';
-                document.getElementById('cdSecs').textContent = '00';
-                document.querySelectorAll('.countdown-box').forEach(b => b.classList.add('done'));
-                document.getElementById('countdownLabel').textContent = '🎉 ¡Su pedido ha sido entregado!';
-                return;
-            }
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
 
-            const totalSecs = Math.floor(diff / 1000);
-            const days = Math.floor(totalSecs / 86400);
-            const hours = Math.floor((totalSecs % 86400) / 3600);
-            const mins = Math.floor((totalSecs % 3600) / 60);
-            const secs = totalSecs % 60;
-
-            document.getElementById('cdDays').textContent = pad(days);
-            document.getElementById('cdHours').textContent = pad(hours);
-            document.getElementById('cdMins').textContent = pad(mins);
-            document.getElementById('cdSecs').textContent = pad(secs);
+            document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
+            document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('cdMins').textContent = String(mins).padStart(2, '0');
+            document.getElementById('cdSecs').textContent = String(secs).padStart(2, '0');
         }
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // ─── STATUS STEPS ───────────────────────────────────────────────────────────
-        // Calculate which step we're on based on elapsed time
         function updateSteps() {
             const now = new Date();
-            const elapsed = now - ORDER_DATE; // ms elapsed since order
-            const totalMs = DELIVERY_MS;
-
-            // Step thresholds (as fraction of total delivery time)
-            // Step 1: Order Confirmed  → immediate
-            // Step 2: Processing       → after 5% of time
-            // Step 3: Dispatched       → after 20% of time
-            // Step 4: In Transit       → after 35% of time
-            // Step 5: Out for Delivery → after 85% of time
-            // Step 6: Delivered        → after 100% of time
-
-            const pct = elapsed / totalMs;
-
+            const elapsed = now - ORDER_DATE;
+            const pct = elapsed / DELIVERY_MS;
+            
+            // Definição de quando cada etapa é concluída
             const steps = [
-                { id: 'step1', threshold: 0 },
-                { id: 'step2', threshold: 0.05 },
-                { id: 'step3', threshold: 0.20 },
-                { id: 'step4', threshold: 0.35 },
-                { id: 'step5', threshold: 0.85 },
-                { id: 'step6', threshold: 1.00 },
+                { id: 'step1', t: 0 },    // Confirmado (Imediato)
+                { id: 'step2', t: 0.05 }, // Preparação (Quase imediato)
+                { id: 'step3', t: 0.30 }, // Despachado
+                { id: 'step4', t: 0.60 }, // Em trânsito
+                { id: 'step5', t: 0.90 }, // Em reparto
+                { id: 'step6', t: 1.00 }  // Entregue
             ];
 
-            let activeIndex = -1;
-            for (let i = 0; i < steps.length; i++) {
-                if (pct >= steps[i].threshold) activeIndex = i;
-            }
+            let activeIdx = -1;
+            steps.forEach((s, i) => { if (pct >= s.t) activeIdx = i; });
 
             steps.forEach((s, i) => {
                 const el = document.getElementById(s.id);
                 el.classList.remove('done', 'active', 'pending');
-                if (i < activeIndex) {
-                    el.classList.add('done');
-                    el.querySelector('.step-dot').textContent = '✓';
-                } else if (i === activeIndex) {
-                    el.classList.add('active');
-                } else {
-                    el.classList.add('pending');
-                    el.querySelector('.step-dot').textContent = '○';
+                if (i < activeIdx) { 
+                    el.classList.add('done'); 
+                    el.querySelector('.step-dot').textContent = '✓'; 
+                }
+                else if (i === activeIdx) { 
+                    el.classList.add('active'); 
+                }
+                else { 
+                    el.classList.add('pending'); 
+                    el.querySelector('.step-dot').textContent = '○'; 
                 }
             });
         }
 
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
         updateSteps();
-        setInterval(updateSteps, 60000); // update steps every minute
 
-        // ─── COMPLAINT FORM ─────────────────────────────────────────────────────────
-        document.getElementById('complaintForm').addEventListener('submit', function (e) {
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Hide form, show success
             this.style.display = 'none';
             document.getElementById('successMsg').classList.add('show');
-            // Scroll to success
-            document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     </script>
 </body>
-
 </html>
